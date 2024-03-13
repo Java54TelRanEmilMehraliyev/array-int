@@ -34,7 +34,12 @@ public class ArraysInt {
    //TODO
    //insert number into sorted array with keeping the sorted order
    //apply method binarySearch of class Arrays
-	 return null;
+	 int [] newArray = addNumber(sortedArray,number);
+	 Arrays.sort(newArray);
+	 
+	 int index = Arrays.binarySearch(sortedArray, number);
+	 
+	 return new int[] {index};
    }
 }
 
