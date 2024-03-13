@@ -9,18 +9,25 @@ public class ArraysInt {
 	  return result;
   }
  
- public static int[] insertNumber(int[] array, int index, int number) {
-    int [] result = new int[array.length + 1];
-    System.arraycopy(array, 0, result, 0,index);
-    result[index] = number;
-    System.arraycopy(array, index, result, index + 1, array.length - index);
-	 return result;
- }
+	 public static int[] insertNumber(int[] array, int index, int number) {
+		    int [] result = array;
+		    if(index > -1 && index <=array.length) {
+		    	result = new int[array.length +1];
+		    }
+		    System.arraycopy(array, 0, result, 0,index);
+		    result[index] = number;
+		    System.arraycopy(array, index, result, index + 1, array.length - index);
+			 return result;
+		 }
  
  public static int[] removeNumber(int[] array, int index) {
-    //TODO
-    //apply method arrayCopy of class System
-	 return null;
+    int [] result = array;
+    if(index > -1 && index <= array.length) {
+    	result = new int[array.length - 1];
+    	System.arraycopy(array, 0, result, 0, index);
+    	System.arraycopy(array, index + 1, result, index, result.length-index);
+    }
+	 return result;
     }
 
  public static int[] insertSorted(int[] sortedArray, int number) {

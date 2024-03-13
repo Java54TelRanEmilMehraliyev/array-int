@@ -23,7 +23,7 @@ class ArraysTest {
 		int[] arrayExpectedMiddle = {10,25,25,30,40,100};
 		int[] arrayActualLast = insertNumber(array,5,25);
 		int[] arrayActualFirst = insertNumber(array,0,25);
-		int[] arrayActualMiddle = insertNumber(array,3,25); 
+		int[] arrayActualMiddle = insertNumber(array,2,25); 
         assertArrayEquals(arrayExpectedLast, arrayActualLast);
         assertArrayEquals(arrayExpectedFirst, arrayActualFirst);
         assertArrayEquals(arrayExpectedMiddle, arrayActualMiddle);
